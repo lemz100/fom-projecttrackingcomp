@@ -1,3 +1,184 @@
 #root {
-  
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+header {
+    display: flex;
+    padding-inline: 32px;
+    flex-direction: column;
+    height: clamp(425px, 80vw, 600px);
+    position: relative;
+    overflow: hidden;
+    section {
+        margin-top: 2.5rem;
+    }
+    .bg-ptn {
+        position: absolute;
+        z-index: -2;
+        border-radius: 0 0 0 12.5%;
+        right: 0;
+        background-color: @blue100;
+        width: clamp(187px, 50vw, 545px);
+        height: 100%;
+    }
+    .hero {
+        max-width: none;
+        position: absolute;
+        z-index: -1;
+        top: 7.8rem;
+        right: clamp(-261px, -40vw, -139px);
+        width: clamp(482px, 120vw, 909px);
+        height: clamp(239px, 60vw, 452px);
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+    width: min(88%, 470px);
+    gap: 2rem;
+    align-items: flex-start;
+    .desc {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-transform: uppercase;
+            .headline {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                .monograph {
+                    .tp4r();
+                    opacity: 0.5;
+                    color: @blue950;
+                }
+                .badge {
+                    padding: 8px;
+                    border-radius: 12.5px;
+                    background-color: @blue950;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48px;
+                    height: 25px;
+                    p {
+                        .tp4b();
+                        color: white;
+                    }
+                }
+            }
+            .insight {
+                .tp2();
+                color: @blue950;
+            }
+        }
+        .info {
+            color: @blue950;
+            .tp5();
+            opacity: 0.75;
+        }
+    }
+    .btn-grp {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .preview {
+            .tp6m();
+            opacity: 0.5;
+            color: @blue950;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #root {
+        gap: 41px;
+    }
+    header {
+        padding-inline: 5rem;
+        height: clamp(600px, 70vw, 800px);
+        .bg-ptn {
+            min-width: 545px;
+            height: 390px;
+        }
+        .hero {
+            top: clamp(124px, calc(124px + (220 * ((100vw - 768px) / (1440 - 768)))), 220px);
+            right: clamp(-261px, calc(-261px + (241 * ((100vw - 768px) / (1440 - 768)))), -20px);
+        }
+    }
+    main {
+        margin-left: 5rem;
+        gap: 4rem;
+        .desc {
+            gap: 2rem;
+            .top {
+                .insight {
+                    .tp1();
+                }
+            }
+            .info {
+                max-width: 28ch;
+            }
+        }
+        .btn-grp {
+            gap: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    
+    #root {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+    }
+    
+    header {
+        position: relative;
+        order: 1;
+        padding: 0;
+        height: 100vh;
+        .bg-ptn {
+            width: 705px;
+            height: 427px;
+        }
+        section {
+            height: auto;
+            width: auto;
+            z-index: 0;
+            position: fixed;
+            inset: 0;
+            margin-inline: 165px;
+        }
+        .hero {
+            top: 13.75rem;
+            width: auto;
+            height: auto;
+            right: -268px;
+            
+        }
+    }
+    main {
+        position: relative;
+        z-index: 1;
+        margin-left: 165px;
+        align-self: center;
+        flex: none;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    header .hero {
+        right: 0;
+    }
 }

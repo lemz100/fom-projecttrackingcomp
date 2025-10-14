@@ -1,0 +1,25 @@
+.button {
+    width: 184px;
+    height: 48px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: white;
+    .tp4b();
+    text-transform: uppercase;
+    background-color: @red400;
+    border-radius: 5px;
+    border: none;
+}
+.button:hover {
+    cursor: pointer;
+}
+.button:active {
+    cursor: pointer;
+    background-color: @red350;
+}
+
+@media screen and (min-width: 768px) {
+    .button {
+        padding-inline: 2rem;
+    }
+}

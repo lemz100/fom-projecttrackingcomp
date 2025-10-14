@@ -1,0 +1,50 @@
+// Base styles for Dropdown component
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 999;
+    height: 233px;
+    // Adjustable properties below:
+    background-color: white;
+    padding: 1rem 2.5rem;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
+}
+.dropdown.visible {
+    display: flex;
+}
+.dropdown .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    p {
+       .tp3();
+       color: @blue950;
+    }
+    .login {
+        opacity: 0.5;
+    }
+}
+.line {
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: @blue950;
+    opacity: 0.15;
+}
+.contents .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+    .dropdown, .dropdown.visible {
+        // Can be adjusted if the desktop has a dropdown.
+        display: none; 
+    }
+}

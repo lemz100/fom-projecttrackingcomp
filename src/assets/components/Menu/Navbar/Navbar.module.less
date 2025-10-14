@@ -1,0 +1,47 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .menuIcon {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+        p {
+            .tp4b();
+            text-transform: uppercase;
+        }
+        p:hover, p:active, p:focus {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            p {
+                color: @blue950;
+            }
+        }
+        .oval {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #242942;
+            opacity: 0.15;
+        }
+        .login {
+            color: @blue950;
+            opacity: 0.5;
+        }
+    }
+}
