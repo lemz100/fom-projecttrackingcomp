@@ -5,8 +5,7 @@ import Button from './assets/components/Button/Button';
 import { useState } from 'react';
 
 function App() {
-  const [dropped, setDropped] = useState(null);
-
+  const [dropped, setDropped] = useState(false);
   function handleDropdown() {
     setDropped(prev => !prev);
   }
